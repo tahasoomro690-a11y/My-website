@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meri Pehli Website</title>
+
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+        font-size: 16px;
+    }
+
+    img {
+        width: 180px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+
+        nav {
+            background-color: darkblue;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+
+        img {
+            width: 200px;
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        section {
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Assalam-o-Alaikum!</h1>
+    <p>Yeh meri pehli website hai.</p>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to My Website</h2>
+        <p>Meri website par khush aamdeed!</p>
+
+        <img src="photo.jpg" alt="Meri Photo">
+
+        <br>
+
+        <button onclick="showMessage()">Message Dekho</button>
+
+        <h2 id="message"></h2>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Main web development seekh raha hoon.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Mujhse rabta karne ke liye neeche click karo.</p>
+
+        <a href="mailto:tahasoomro690@gmail.com">
+            <button>Email Me</button>
+        </a>
+    </section>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText =
+                "Assalam-o-Alaikum! Meri website par khush aamdeed!";
+        }
+    </script>
+
+</body>
+</html>
