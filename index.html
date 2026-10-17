@@ -8,7 +8,8 @@
 
     <style>
         body {
-            background-color: #f0f8ff;
+           background-color: #0b1120;
+           color: white;
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
@@ -16,7 +17,7 @@
         }
 
         h1 {
-            color: darkblue;
+            color: #60a5fa;
         }
 
         p {
@@ -44,10 +45,18 @@
 }
 
         nav {
-            background-color: darkblue;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
+    background-color: #111a2e;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
+}
 
         nav a {
             color: white;
@@ -63,14 +72,22 @@
         }
 
         button {
-            background-color: blue;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            margin: 10px;
+           
+button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
         }
 
         section {
@@ -92,11 +109,22 @@
     </nav>
 
     <section id="home">
-        <h2>Welcome to My Website</h2>
-        <p>Meri website par khush aamdeed!</p>
+        
+<div class="hero-text">
+    <h1>Assalam-o-Alaikum! 👋</h1>
+    <h2>Main Taha hoon</h2>
+    <h3>Beginner Web Developer</h3>
+    <p>
+        Main HTML, CSS aur JavaScript seekh raha hoon.
+        Mera maqsad professional websites banana hai.
+    </p>
+    <a href="#about" class="btn">Mere Baare Mein</a>
+</div>
 
-        <img src="photo.jpg" alt="Meri Photo">
 
+      <div class="hero-image">
+    <img src="developer.png.png" alt="Coding workspace">
+</div>
         <br>
 
         <button onclick="showMessage()">Message Dekho</button>
