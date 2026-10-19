@@ -1,132 +1,345 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>Taha Soomro | My Website</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: #000000;
+        }
+
         body {
-           background-color: #0b1120;
-           color: white;
+            background-color: #000000;
+            color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 20px;
         }
 
-        h1 {
-            color: #60a5fa;
+        h1, h2, h3 {
+            color: #D4AF37;
         }
 
         p {
             font-size: 18px;
+            line-height: 1.7;
+            color: #ffffff;
         }
 
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 8px;
-        font-size: 16px;
-    }
-
-    img {
-        width: 180px;
-    }
-
-    button {
-        max-width: 100%;
-    }
-}
-
         nav {
-    background-color: #111a2e;
-    padding: 18px;
-    border-radius: 12px;
-    margin-bottom: 35px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 15px;
-    font-size: 18px;
-}
+            background-color: #111111;
+            padding: 18px;
+            border: 1px solid #D4AF37;
+            border-radius: 12px;
+            margin-bottom: 35px;
+        }
 
         nav a {
-            color: white;
+            color: #ffffff;
             text-decoration: none;
-            margin: 15px;
+            margin: 12px;
             font-size: 18px;
         }
 
-        img {
-            width: 200px;
-            max-width: 100%;
-            border-radius: 15px;
-        }
-
-        button {
-           
-button {
-    background-color: #3b82f6;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    max-width: 100%;
-}
-
-button:hover {
-    background-color: #2563eb;
-}
-
+        nav a:hover {
+            color: #D4AF37;
         }
 
         section {
-            padding: 20px;
+            background-color: #000000;
+            padding: 25px 15px;
             margin-top: 20px;
+            border: 1px solid #333333;
+            border-radius: 12px;
         }
+
+        .hero-text {
+            margin: 25px auto;
+            max-width: 700px;
+        }
+
+        .hero-image img {
+            width: 200px;
+            max-width: 100%;
+            border-radius: 15px;
+            border: 2px solid #D4AF37;
+        }
+
+        button, .btn {
+            display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 12px 24px;
+            border: 1px solid #D4AF37;
+            border-radius: 8px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 8px;
+        }
+
+        button:hover, .btn:hover {
+            background-color: #D4AF37;
+            color: #000000;
+        }
+
+        #message {
+            color: #D4AF37;
+        }
+
+        footer {
+            padding: 20px;
+            margin-top: 25px;
+            color: #D4AF37;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+                font-size: 16px;
+            }
+
+            section {
+                padding: 18px 10px;
+            }
+
+            button, .btn {
+                max-width: 100%;
+            }
+        }
+        
+.skill-bar {
+    width: 100%;
+    max-width: 500px;
+    height: 20px;
+    background-color: #333333;
+    border: 1px solid #D4AF37;
+    border-radius: 10px;
+    margin: 10px auto 25px;
+    overflow: hidden;
+}
+
+.skill {
+    height: 100%;
+    background-color: #D4AF37;
+    color: #000000;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.html {
+    width: 70%;
+}
+
+.css {
+    width: 45%;
+}
+
+.javascript {
+    width: 20%;
+}
+
+h1, h2 {
+    animation: headingEffect 1.5s ease-in-out;
+}
+
+@keyframes headingEffect {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-bar {
+    overflow: hidden;
+}
+
+.skill {
+    animation: skillGrow 1.5s ease-out;
+}
+
+@keyframes skillGrow {
+    from {
+        width: 0;
+    }
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+#contact {
+    background-color: #111111;
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #D4AF37;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    line-height: 1.8;
+}
+
+#contact .btn {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 24px;
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+    color: #D4AF37;
+    background: #000000;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#contact .btn:hover {
+    background: #D4AF37;
+    color: #000000;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #000000;
+    padding: 15px;
+}
+
+.project-card {
+    background-color: #111111;
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+#contact form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+#contact input,
+#contact textarea {
+    box-sizing: border-box;
+    width: 220px;
+    padding: 12px;
+    border: 1px solid #D4AF37;
+    border-radius: 6px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#contact textarea {
+    min-height: 48px;
+    resize: vertical;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 2px solid #D4AF37;
+}
+
+@media (max-width: 600px) {
+    #contact input,
+    #contact textarea {
+        width: 100%;
+    }
+
+    #contact form {
+        flex-direction: column;
+    }
+
+    #contact form button {
+        width: 100%;
+    }
+}
+
     </style>
 </head>
 
 <body>
 
-    <h1>Assalam-o-Alaikum!</h1>
-    <p>This Is My First Website.</p>
+    <h1>Assalamualaikum</h1>
+    <p>Welcome to My Website</p>
 
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        
+<a href="#projects">Projects</a>
+
         <a href="#contact">Contact</a>
     </nav>
 
     <section id="home">
-        
-<div class="hero-text">
-    <h1>Assalam-o-Alaikum! 👋</h1>
-    <h2>Im,Taha Soomro</h2>
-    <h3>Beginner Web Developer</h3>
-    <p>
-        Main HTML, CSS aur JavaScript seekh raha hoon.
-        Mera maqsad professional websites banana hai.
-    </p>
-    <a href="#about" class="btn">Mere Baare Mein</a>
-</div>
+        <div class="hero-text">
+            <h1>I'm Taha Soomro</h1>
+            <h2>Beginner Web Developer</h2>
 
+            <p>
+                Main HTML, CSS aur JavaScript seekh raha hoon.
+                Mera maqsad professional websites banana hai.
+            </p>
 
-      <div class="hero-image">
-    <img src="developer.png.png" alt="Coding workspace">
-</div>
-        <br>
+            <a href="#about" class="btn">Mere Baare Mein</a>
+            
+<a href="#contact" class="btn">Hire Me</a>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="developer.png.png" alt="Taha's profile picture">
+        </div>
+
+        <br><br>
 
         <button onclick="showMessage()">Message Dekho</button>
 
@@ -135,17 +348,94 @@ button:hover {
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Main web development seekh raha hoon.</p>
+        <p>
+            Main web development seekh raha hoon.
+            Main apni skills behtar bana kar achhi websites banana chahta hoon.
+        </p>
     </section>
 
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+        <h3>My Personal Website</h3>
+        <p>Ye meri pehli website hai jo main HTML aur CSS se bana raha hoon.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>My Next Project</h3>
+        <p>Main jald hi apna agla web development project banaunga.</p>
+    </div>
+</section>
+
     <section id="contact">
+        
+<h2>Contact Me</h2>
+<p>Agar aapko website banwani hai, to mujhe message karein!</p>
+
+<form action="https://formsubmit.co/tahasoomro690@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Aapka Naam" required>
+    <input type="email" name="email" placeholder="Aapka Email" required>
+    <textarea name="message" placeholder="Apna Message Likhein" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+</form>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <p>HTML - Learning</p>
+    <div class="skill-bar">
+        <div class="skill html">HTML</div>
+    </div>
+
+    <p>CSS - Learning</p>
+    <div class="skill-bar">
+        <div class="skill css">CSS</div>
+    </div>
+
+    <p>JavaScript - Learning</p>
+    <div class="skill-bar">
+        <div class="skill javascript">JavaScript</div>
+    </div>
+</section>
+
         <h2>Contact Me</h2>
         <p>Mujhse rabta karne ke liye neeche click karo.</p>
 
-        <a href="mailto:tahasoomro690@gmail.com">
-            <button>Email Me</button>
+        
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=tahasoomro690@gmail.com" target="_blank" class="btn">
+    Email Me
+</a>
+
         </a>
     </section>
+
+   
+<footer>
+    <p>© 2026 Taha Soomro</p>
+    <p>Made with ❤️ while learning Web Development</p>
+    <p>Thank you for visiting my website!</p>
+</footer>
+
+<section id="social">
+    <h2>Follow Me</h2>
+    <p>My Social Media Account Follow Me</p>
+
+    
+<a href="https://www.youtube.com/@aifuntoons-y4e" target="_blank" class="btn">YouTube</a>
+
+
+    
+<a href="https://www.facebook.com/profile.php?id=61594856832248" target="_blank" class="btn">Facebook</a>
+
+
+<a href="https://wa.me/923001234567" target="_blank" class="btn" style="border-color: #25D366;">WhatsApp Me</a>
+
+
+
+
+    <a href="https://www.instagram.com/" target="_blank" class="btn">Instagram</a>
+</section>
+
 
     <script>
         function showMessage() {
@@ -154,6 +444,9 @@ button:hover {
         }
     </script>
 
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    Back to Top ↑
+</button>
+
 </body>
 </html>
-
