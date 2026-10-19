@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taha Soomro - Beginner Web Developer">
     <title>Taha Soomro | My Website</title>
 
     <style>
@@ -13,16 +14,16 @@
 
         html {
             scroll-behavior: smooth;
-            background-color: #000000;
+            scroll-padding-top: 90px;
         }
 
         body {
-            background-color: #000000;
-            color: #ffffff;
+            margin: 0;
+            padding: 15px;
+            background: #000;
+            color: #fff;
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 20px;
         }
 
         h1, h2, h3 {
@@ -30,24 +31,26 @@
         }
 
         p {
-            font-size: 18px;
+            font-size: 17px;
             line-height: 1.7;
-            color: #ffffff;
         }
 
         nav {
-            background-color: #111111;
-            padding: 18px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111;
+            padding: 15px 8px;
             border: 1px solid #D4AF37;
             border-radius: 12px;
-            margin-bottom: 35px;
         }
 
         nav a {
-            color: #ffffff;
+            display: inline-block;
+            color: #fff;
             text-decoration: none;
-            margin: 12px;
-            font-size: 18px;
+            margin: 8px;
+            font-size: 16px;
         }
 
         nav a:hover {
@@ -55,387 +58,289 @@
         }
 
         section {
-            background-color: #000000;
-            padding: 25px 15px;
-            margin-top: 20px;
-            border: 1px solid #333333;
+            padding: 30px 18px;
+            margin: 20px auto;
+            max-width: 950px;
+            border: 1px solid #333;
             border-radius: 12px;
+            scroll-margin-top: 90px;
+        }
+
+        #home, #contact, #social {
+            background: #111;
+            border-color: #D4AF37;
         }
 
         .hero-text {
-            margin: 25px auto;
             max-width: 700px;
+            margin: auto;
         }
 
-        .hero-image img {
-            width: 200px;
-            max-width: 100%;
-            border-radius: 15px;
-            border: 2px solid #D4AF37;
-        }
-
-        button, .btn {
+        .btn, button {
             display: inline-block;
-            background-color: #000000;
-            color: #ffffff;
-            padding: 12px 24px;
+            margin: 8px;
+            padding: 12px 22px;
+            background: #000;
+            color: #D4AF37;
             border: 1px solid #D4AF37;
             border-radius: 8px;
             font-size: 16px;
             text-decoration: none;
             cursor: pointer;
-            margin: 8px;
+            transition: 0.3s ease;
         }
 
-        button:hover, .btn:hover {
-            background-color: #D4AF37;
-            color: #000000;
+        .btn:hover, button:hover {
+            background: #D4AF37;
+            color: #000;
+            transform: translateY(-3px);
         }
 
         #message {
             color: #D4AF37;
         }
 
+        .project-card {
+            background: #111;
+            border: 1px solid #D4AF37;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 700px;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .skill-bar {
+            width: 100%;
+            max-width: 500px;
+            height: 22px;
+            margin: 10px auto 25px;
+            background: #333;
+            border: 1px solid #D4AF37;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill {
+            height: 100%;
+            background: #D4AF37;
+            color: #000;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 20px;
+            border-radius: 10px;
+        }
+
+        .html { width: 70%; }
+        .css { width: 45%; }
+        .javascript { width: 20%; }
+
+        #contact form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%;
+            max-width: 300px;
+            padding: 12px;
+            background: #000;
+            color: #fff;
+            border: 1px solid #D4AF37;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        #contact textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        #contact input:focus, #contact textarea:focus {
+            outline: 2px solid #D4AF37;
+        }
+
         footer {
             padding: 20px;
-            margin-top: 25px;
             color: #D4AF37;
         }
 
         @media (max-width: 600px) {
             body {
-                padding: 10px;
+                padding: 8px;
             }
 
             nav a {
-                display: inline-block;
-                margin: 8px;
-                font-size: 16px;
+                margin: 6px;
+                font-size: 14px;
             }
 
             section {
-                padding: 18px 10px;
+                padding: 22px 12px;
             }
 
-            button, .btn {
+            #contact form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #contact input, #contact textarea {
                 max-width: 100%;
             }
-        }
-        
-.skill-bar {
+
+            #contact form button {
+                width: 100%;
+            }
+        }.hero-image {
     width: 100%;
-    max-width: 500px;
-    height: 20px;
-    background-color: #333333;
-    border: 1px solid #D4AF37;
-    border-radius: 10px;
-    margin: 10px auto 25px;
-    overflow: hidden;
-}
-
-.skill {
-    height: 100%;
-    background-color: #D4AF37;
-    color: #000000;
-    text-align: center;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
-.html {
-    width: 70%;
-}
-
-.css {
-    width: 45%;
-}
-
-.javascript {
-    width: 20%;
-}
-
-h1, h2 {
-    animation: headingEffect 1.5s ease-in-out;
-}
-
-@keyframes headingEffect {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.skill-bar {
-    overflow: hidden;
-}
-
-.skill {
-    animation: skillGrow 1.5s ease-out;
-}
-
-@keyframes skillGrow {
-    from {
-        width: 0;
-    }
-}
-
-.project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
-}
-
-#contact {
-    background-color: #111111;
-    border: 1px solid #D4AF37;
-    border-radius: 12px;
-    padding: 25px;
-    margin: 20px;
-    text-align: center;
-}
-
-#contact h2 {
-    color: #D4AF37;
-    margin-bottom: 15px;
-}
-
-#contact p {
-    line-height: 1.8;
-}
-
-#contact .btn {
-    display: inline-block;
-    margin: 8px;
-    padding: 12px 24px;
-    border: 1px solid #D4AF37;
-    border-radius: 8px;
-    color: #D4AF37;
-    background: #000000;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-#contact .btn:hover {
-    background: #D4AF37;
-    color: #000000;
-    transform: translateY(-3px);
-}
-
-section {
-    padding: 40px 20px;
-    margin-bottom: 20px;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #000000;
-    padding: 15px;
-}
-
-.project-card {
-    background-color: #111111;
-    border: 1px solid #D4AF37;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 15px 0;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-#contact form {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-top: 25px;
+    overflow: hidden;
+    margin: 20px auto;
 }
 
-#contact input,
-#contact textarea {
-    box-sizing: border-box;
-    width: 220px;
-    padding: 12px;
-    border: 1px solid #D4AF37;
-    border-radius: 6px;
-    background: #000000;
-    color: #ffffff;
-    font-size: 16px;
+.hero-image img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #D4AF37;
 }
-
-#contact textarea {
-    min-height: 48px;
-    resize: vertical;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-    outline: 2px solid #D4AF37;
-}
-
-@media (max-width: 600px) {
-    #contact input,
-    #contact textarea {
-        width: 100%;
-    }
-
-    #contact form {
-        flex-direction: column;
-    }
-
-    #contact form button {
-        width: 100%;
-    }
-}
-
     </style>
 </head>
 
 <body>
 
-    <h1>Assalamualaikum</h1>
-    <p>Welcome to My Website</p>
+    <header>
+        <h1>Assalamualaikum!</h1>
+        <p>Welcome to My Website</p>
+    </header>
 
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        
-<a href="#projects">Projects</a>
-
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="#social">Social Media</a>
     </nav>
 
-    <section id="home">
-        <div class="hero-text">
-            <h1>I'm Taha Soomro</h1>
-            <h2>Beginner Web Developer</h2>
+    <main>
+        <section id="home">
+            <div class="hero-text">
+                <h1>I'm Taha Soomro</h1>
+                <h2>Beginner Web Developer</h2>
+<div class="hero-image">
+    <img src="developer.png.png" alt="Taha Soomro Profile Picture">
+</div>
+                <p>
+                    Main HTML, CSS aur JavaScript seekh raha hoon.
+                    Mera maqsad professional websites banana hai.
+                </p>
 
+                <a href="#about" class="btn">Mere Baare Mein</a>
+                <a href="#contact" class="btn">Hire Me</a>
+            </div>
+
+            <button onclick="showMessage()">Message Dekho</button>
+            <h3 id="message" aria-live="polite"></h3>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
             <p>
-                Main HTML, CSS aur JavaScript seekh raha hoon.
-                Mera maqsad professional websites banana hai.
+                Main web development seekh raha hoon.
+                Main apni skills behtar bana kar achhi websites banana chahta hoon.
             </p>
+        </section>
 
-            <a href="#about" class="btn">Mere Baare Mein</a>
-            
-<a href="#contact" class="btn">Hire Me</a>
+        <section id="skills">
+            <h2>My Skills</h2>
 
-        </div>
+            <p>HTML - Learning</p>
+            <div class="skill-bar">
+                <div class="skill html">70%</div>
+            </div>
 
-        <div class="hero-image">
-            <img src="developer.png.png" alt="Taha's profile picture">
-        </div>
+            <p>CSS - Learning</p>
+            <div class="skill-bar">
+                <div class="skill css">45%</div>
+            </div>
 
-        <br><br>
+            <p>JavaScript - Learning</p>
+            <div class="skill-bar">
+                <div class="skill javascript">20%</div>
+            </div>
+        </section>
 
-        <button onclick="showMessage()">Message Dekho</button>
+        <section id="projects">
+            <h2>My Projects</h2>
 
-        <h2 id="message"></h2>
-    </section>
+            <div class="project-card">
+                <h3>My Personal Website</h3>
+                <p>Ye meri pehli website hai jo main HTML aur CSS se bana raha hoon.</p>
+            </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Main web development seekh raha hoon.
-            Main apni skills behtar bana kar achhi websites banana chahta hoon.
-        </p>
-    </section>
+            <div class="project-card">
+                <h3>My Next Project</h3>
+                <p>Main jald hi apna agla web development project banaunga.</p>
+            </div>
+        </section>
 
-<section id="projects">
-    <h2>My Projects</h2>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Agar aapko website banwani hai, to mujhe message karein!</p>
 
-    <div class="project-card">
-        <h3>My Personal Website</h3>
-        <p>Ye meri pehli website hai jo main HTML aur CSS se bana raha hoon.</p>
-    </div>
+            <form action="https://formsubmit.co/tahasoomro690@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New message from Taha's website">
+                <input type="text" name="name" placeholder="Aapka Naam" required>
+                <input type="email" name="email" placeholder="Aapka Email" required>
+                <textarea name="message" placeholder="Apna Message Likhein" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
 
-    <div class="project-card">
-        <h3>My Next Project</h3>
-        <p>Main jald hi apna agla web development project banaunga.</p>
-    </div>
-</section>
+            <p>Ya seedha email karein:</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tahasoomro690@gmail.com"
+               target="_blank" rel="noopener noreferrer" class="btn">Email Me</a>
+        </section>
 
-    <section id="contact">
-        
-<h2>Contact Me</h2>
-<p>Agar aapko website banwani hai, to mujhe message karein!</p>
+        <section id="social">
+            <h2>Follow Me</h2>
+            <p>Mere social media accounts par follow karein.</p>
 
-<form action="https://formsubmit.co/tahasoomro690@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Aapka Naam" required>
-    <input type="email" name="email" placeholder="Aapka Email" required>
-    <textarea name="message" placeholder="Apna Message Likhein" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-</form>
+            <a href="https://www.youtube.com/@aifuntoons-y4e"
+               target="_blank" rel="noopener noreferrer" class="btn">YouTube</a>
 
-<section id="skills">
-    <h2>My Skills</h2>
-    <p>HTML - Learning</p>
-    <div class="skill-bar">
-        <div class="skill html">HTML</div>
-    </div>
+            <a href="https://www.facebook.com/profile.php?id=61594856832248"
+               target="_blank" rel="noopener noreferrer" class="btn">Facebook</a>
 
-    <p>CSS - Learning</p>
-    <div class="skill-bar">
-        <div class="skill css">CSS</div>
-    </div>
+            <!-- Agar neeche wala number aapka nahi hai to apna WhatsApp number likhein -->
+            <a href="https://wa.me/923001234567"
+               target="_blank" rel="noopener noreferrer" class="btn">WhatsApp Me</a>
 
-    <p>JavaScript - Learning</p>
-    <div class="skill-bar">
-        <div class="skill javascript">JavaScript</div>
-    </div>
-</section>
+            <a href="https://www.instagram.com/"
+               target="_blank" rel="noopener noreferrer" class="btn">Instagram</a>
+        </section>
+    </main>
 
-        <h2>Contact Me</h2>
-        <p>Mujhse rabta karne ke liye neeche click karo.</p>
-
-        
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=tahasoomro690@gmail.com" target="_blank" class="btn">
-    Email Me
-</a>
-
-        </a>
-    </section>
-
-   
-<footer>
-    <p>© 2026 Taha Soomro</p>
-    <p>Made with ❤️ while learning Web Development</p>
-    <p>Thank you for visiting my website!</p>
-</footer>
-
-<section id="social">
-    <h2>Follow Me</h2>
-    <p>My Social Media Account Follow Me</p>
-
-    
-<a href="https://www.youtube.com/@aifuntoons-y4e" target="_blank" class="btn">YouTube</a>
-
-
-    
-<a href="https://www.facebook.com/profile.php?id=61594856832248" target="_blank" class="btn">Facebook</a>
-
-
-<a href="https://wa.me/923001234567" target="_blank" class="btn" style="border-color: #25D366;">WhatsApp Me</a>
-
-
-
-
-    <a href="https://www.instagram.com/" target="_blank" class="btn">Instagram</a>
-</section>
-
+    <footer>
+        <p>© 2026 Taha Soomro</p>
+        <p>Made with ❤️ while learning Web Development</p>
+        <p>Thank you for visiting my website!</p>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Back to Top ↑
+        </button>
+    </footer>
 
     <script>
         function showMessage() {
@@ -443,10 +348,6 @@ nav {
                 "Assalam-o-Alaikum! Meri website par khush aamdeed!";
         }
     </script>
-
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    Back to Top ↑
-</button>
 
 </body>
 </html>
